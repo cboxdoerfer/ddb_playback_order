@@ -1,5 +1,5 @@
 /*
-    Bookmark Manager Plugin for DeaDBeeF audio player
+    Playback Order Plugin for DeaDBeeF audio player
     Copyright (C) 2014 Christian Boxdörfer <christian.boxdoerfer@posteo.de>
 
     This program is free software; you can redistribute it and/or
@@ -73,7 +73,6 @@ playback_order_message (ddb_gtkui_widget_t *widget, uint32_t id, uintptr_t ctx, 
 static void
 playback_order_changed (GtkComboBox *widget, gpointer user_data)
 {
-    printf("order changed\n");
     int playback_order = gtk_combo_box_get_active (GTK_COMBO_BOX (widget));
     switch (playback_order) {
     case PLAYBACK_ORDER_LINEAR:
