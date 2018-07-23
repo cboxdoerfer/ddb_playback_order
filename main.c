@@ -187,6 +187,11 @@ static DB_misc_t plugin = {
     .plugin.version_major = 0,
     .plugin.version_minor = 1,
     .plugin.type = DB_PLUGIN_MISC,
+#if GTK_CHECK_VERSION(3,0,0)
+    .plugin.id = "playback_order_widget-gtk3",
+#else
+    .plugin.id = "playback_order_widget",
+#endif
     .plugin.name = "Playback order menu",
     .plugin.descr = "A dropdown menu to switch between different playback orders",
     .plugin.copyright =
